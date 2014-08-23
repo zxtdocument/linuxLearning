@@ -1,0 +1,26 @@
+Xorg
+  Xwindow server. 
+  start up:  Xorg :01 vt7 //vt7 virtual terminal 7; 01:display number
+
+
+xhost
+  server access control program for X
+  +name given name is added to the list allowed to connect to the server.
+  -name given name is removed from the list
+  +  Access is granted to everyone.
+  -  Access is restricted to only those on the list.
+  NAMES:
+    A complete name has the syntax 'family:name' where the families are as follows:
+    inet  IPv4
+    inet6 IPv6
+    dnet  DECnet host
+    nis   Secure RPC network name
+    krb   Kerberos V5 principal
+    local contains only one name, the empty string
+    si    Server Interpreted
+    The local family specifies all the local connections at once. However, the server interpreted address "si:localuser:username" can be used to specify a single local user.
+
+
+When run a program, using the -display :num can specifiy which server to run. Or use the DISPLAY variable: export DISPLAY=:1
+  
+
